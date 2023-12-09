@@ -2,88 +2,10 @@ import { Code2Icon, LayoutPanelTopIcon, WorkflowIcon } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import SkillTile from "./SkillTile";
+import { skills } from "@/lib/constants";
 
 const Hero = () => {
-  const skills = [
-    {
-      label: "Front-end Development",
-      icon: LayoutPanelTopIcon,
-      desc: "I love to create beautiful responsive websites from scratch",
-      skills: [
-        {
-          name: "HTML",
-        },
-        {
-          name: "CSS",
-        },
-        {
-          name: "Javascript",
-        },
-        {
-          name: "Typescript",
-        },
-        {
-          name: "ReactJs",
-        },
-        {
-          name: "NextJs",
-        },
-        {
-          name: "Socket.io",
-        },
-        {
-          name: "WebRTC",
-        },
-      ],
-    },
-    {
-      label: "Back-end & Databases",
-      icon: Code2Icon,
-      desc: "I design scalable applications and build them with utmost optimisation",
-      skills: [
-        {
-          name: "NodeJS",
-        },
-        {
-          name: "MongoDB",
-        },
-        {
-          name: "MySQL",
-        },
-        {
-          name: "Socket.io",
-        },
-      ],
-    },
-    {
-      label: "DevOps",
-      icon: WorkflowIcon,
-      desc: "I can automate operations for seamless workflow",
-      skills: [
-        {
-          name: "AWS",
-        },
-        {
-          name: "Github",
-        },
-        {
-          name: "Github Actions",
-        },
-        {
-          name: "Jenkins",
-        },
-        {
-          name: "Docker",
-        },
-        {
-          name: "Ansible",
-        },
-        {
-          name: "Terraform",
-        },
-      ],
-    },
-  ];
+  const user_skills = skills;
 
   return (
     <section className="flex flex-col items-center justify-center pt-32">
@@ -127,7 +49,7 @@ const Hero = () => {
 
         {/* Skills tiles */}
         <div className="w-[70%] min-h-[600px] border border-[rgba(0,0,0,0.2)] bg-white absolute top-[80%] left-[50%] translate-x-[-50%] rounded-2xl shadow-2xl flex">
-          {skills.map((skill, i) => (
+          {user_skills.map((skill, i) => (
             <SkillTile
               key={i}
               Label={skill.label}
