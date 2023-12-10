@@ -10,7 +10,10 @@ interface hero_information_proto {
 const Hero = () => {
   const hero_information: hero_information_proto = hero_info;
   return (
-    <section className="flex flex-col items-center justify-center pt-32">
+    <section
+      id="hero"
+      className="flex flex-col items-center justify-center pt-32"
+    >
       {/* Hero Section */}
 
       <div className="flex flex-col items-center gap-4 px-10 md:px-0">

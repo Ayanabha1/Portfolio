@@ -30,7 +30,7 @@ const SkillTile = ({ Label, Desc, Icon, skills }: propType) => {
       </div>
 
       {/* Technologies */}
-      <div className="mt-12">
+      <div className="mt-5 md:mt-12">
         <h1 className="text-center text-lg lg:text-xl text-primary">
           Technologies I know:
         </h1>

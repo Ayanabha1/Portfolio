@@ -4,6 +4,9 @@ import { Roboto } from "next/font/google";
 import Hero from "@/components/Hero";
 import { cn } from "@/lib/utils";
 import About from "@/components/About";
+import AvailableBadge from "@/components/AvailableBadge";
+import Projects from "@/components/Projects";
+import Skills from "@/components/Skills";
 
 const poppins = Roboto({
   weight: ["300", "400", "700"],
@@ -16,6 +19,9 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Skills />
+      <Projects />
+      <AvailableBadge />
     </main>
   );
 }

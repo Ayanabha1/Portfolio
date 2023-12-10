@@ -109,3 +109,57 @@ export const skills = [
     ],
   },
 ];
+
+export const projects = [
+  {
+    name: "QUELLO",
+    techs: [
+      "NextJs",
+      "Mysql",
+      "Prisma",
+      "OpenAI API",
+      "Replica API",
+      "Stripe",
+      "TailwindCSS",
+      "Shadcn/Ui",
+    ],
+    images: ["/project_images/quello/1.png"],
+    git: "https://github.com/Ayanabha1/Quello",
+    link: "https://quello.vercel.app",
+  },
+  {
+    name: "SPORTFLIX",
+    techs: [
+      "ReactJs",
+      "NodeJs",
+      "MongoDB",
+      "Socket.io",
+      "LeafletJs Api",
+      "AWS Lambda",
+      "AWS API Gateway",
+      "AWS S3",
+      "AWS Cloudfront",
+    ],
+    images: ["/project_images/sportflix/1.png"],
+    git: "https://github.com/Ayanabha1/SportFlix",
+    link: "https://sportflix.ayanabha.xyz",
+  },
+  {
+    name: "MEETUP",
+    techs: [
+      "ReactJs",
+      "TailwindCSS",
+      "NodeJs",
+      "MongoDB",
+      "WebRTC",
+      "Agora.IO APIs",
+      "AWS Lambda",
+      "AWS API Gateway",
+      "AWS S3",
+      "AWS Cloudfront",
+    ],
+    images: ["/project_images/meetup/1.png"],
+    git: "https://github.com/Ayanabha1/Meetup",
+    link: "https://meetup.ayanabha.xyz",
+  },
+];

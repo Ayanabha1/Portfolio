@@ -10,17 +10,22 @@ const Navbar = () => {
       <div className="relative h-10 w-10 sm:h-12 sm:w-12 ">
         <Image fill src="/logo.png" alt="logo" />
       </div>
-      <div className="space-x-4 hidden sm:flex items-center">
-        <ul>
+      <div className="gap-4 hidden sm:flex items-center">
+        <ul className="flex gap-4">
           <li>
             <Link href="#about" scroll={true}>
               About Me
             </Link>
           </li>
+          <li>
+            <Link href="#projects" scroll={true}>
+              Projects
+            </Link>
+          </li>
         </ul>
         <button>Resume</button>
         <button className="text-primary border-2 border-primary p-2 px-4 rounded-3xl">
-          Say Hello
+          Contact
         </button>
       </div>
       <button className="block sm:hidden">
