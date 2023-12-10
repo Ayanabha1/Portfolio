@@ -1,5 +1,7 @@
+"use client";
 import { MenuIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -8,7 +10,14 @@ const Navbar = () => {
       <div className="relative h-10 w-10 sm:h-12 sm:w-12 ">
         <Image fill src="/logo.png" alt="logo" />
       </div>
-      <div className="space-x-4 hidden sm:block">
+      <div className="space-x-4 hidden sm:flex items-center">
+        <ul>
+          <li>
+            <Link href="#about" scroll={true}>
+              About Me
+            </Link>
+          </li>
+        </ul>
         <button>Resume</button>
         <button className="text-primary border-2 border-primary p-2 px-4 rounded-3xl">
           Say Hello
