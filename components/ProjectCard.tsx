@@ -52,7 +52,7 @@ const ProjectCard = ({ project }: { project: project_interface }) => {
           containerClass="carousel-container"
         >
           {project.images!.map((img, i) => (
-            <div className="relative h-full w-full">
+            <div key={i} className="relative h-full w-full">
               <Image src={img} fill alt="" />
             </div>
           ))}

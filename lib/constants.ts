@@ -1,4 +1,17 @@
-import { Code2Icon, LayoutPanelTopIcon, WorkflowIcon } from "lucide-react";
+import {
+  Code2Icon,
+  GithubIcon,
+  LayoutPanelTopIcon,
+  LinkedinIcon,
+  MailIcon,
+  WorkflowIcon,
+  icons,
+} from "lucide-react";
+
+export const email = "ayanabha2002@gmail.com";
+export const resume =
+  "https://drive.google.com/file/d/1h-kfQQfqmLGPQBf-Wp7u30FpH3p2_E87/view?usp=sharing";
+export const phoneno = "+91 8918829811";
 
 export const hero_info = {
   hero_text: "Full-Stack Web Developer & Problem Solver",
@@ -9,8 +22,6 @@ export const hero_info = {
 export const about_details = {
   heading: "Hi, I am Ayanabha Misra. Nice to meet you 👋🏻",
   desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nobis distinctio! Iure iusto necessitatibus a! Repellendus pariatur eum hic non, asperiores repellat in amet delectus. Sunt in, iusto accusamus perferendis enim dicta earum labore. Vitae modi velit tenetur esse sunt!",
-  class: "A",
-  image: "asdas",
 };
 
 export const skills = [
@@ -152,7 +163,13 @@ export const projects = [
       "AWS S3",
       "AWS Cloudfront",
     ],
-    images: ["/project_images/sportflix/1.png"],
+    images: [
+      "/project_images/sportflix/1.png",
+      "/project_images/sportflix/2.png",
+      "/project_images/sportflix/3.png",
+      "/project_images/sportflix/4.png",
+      "/project_images/sportflix/5.png",
+    ],
     git: "https://github.com/Ayanabha1/SportFlix",
     link: "https://sportflix.ayanabha.xyz",
   },
@@ -170,8 +187,34 @@ export const projects = [
       "AWS S3",
       "AWS Cloudfront",
     ],
-    images: ["/project_images/meetup/1.png"],
+    images: [
+      "/project_images/meetup/1.png",
+      "/project_images/meetup/2.png",
+      "/project_images/meetup/3.png",
+      "/project_images/meetup/4.png",
+    ],
     git: "https://github.com/Ayanabha1/Meetup",
     link: "https://meetup.ayanabha.xyz",
   },
 ];
+
+export const footer_details = {
+  heading: "Living, learning, & leveling up one day at a time",
+  socials: [
+    {
+      name: "Linkedin",
+      icon: LinkedinIcon,
+      link: "https://www.linkedin.com/in/ayanabha-misra-7196091b4/",
+    },
+    {
+      name: "Github",
+      icon: GithubIcon,
+      link: "https://github.com/Ayanabha1",
+    },
+    {
+      name: "Email",
+      icon: MailIcon,
+      link: `mailto:${email}`,
+    },
+  ],
+};
