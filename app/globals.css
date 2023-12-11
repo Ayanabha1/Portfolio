@@ -7,3 +7,11 @@ html,
 body {
     scroll-behavior: smooth;
 }
+
+.react-multi-carousel-track {
+    height: 100%;
+}
+
+.react-multi-carousel-list {
+    height: 100%;
+}

@@ -6,6 +6,13 @@ export const hero_info = {
     "I create beautiful things when I have a cup of coffee with me 🍵.",
 };
 
+export const about_details = {
+  heading: "Hi, I am Ayanabha Misra. Nice to meet you 👋🏻",
+  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nobis distinctio! Iure iusto necessitatibus a! Repellendus pariatur eum hic non, asperiores repellat in amet delectus. Sunt in, iusto accusamus perferendis enim dicta earum labore. Vitae modi velit tenetur esse sunt!",
+  class: "A",
+  image: "asdas",
+};
+
 export const skills = [
   {
     label: "Front-end Development",
@@ -123,7 +130,12 @@ export const projects = [
       "TailwindCSS",
       "Shadcn/Ui",
     ],
-    images: ["/project_images/quello/1.png"],
+    images: [
+      "/project_images/quello/1.png",
+      "/project_images/quello/2.png",
+      "/project_images/quello/3.png",
+      "/project_images/quello/4.png",
+    ],
     git: "https://github.com/Ayanabha1/Quello",
     link: "https://quello.vercel.app",
   },
