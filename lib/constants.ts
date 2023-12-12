@@ -1,5 +1,6 @@
 import {
   Code2Icon,
+  DownloadIcon,
   GithubIcon,
   LayoutPanelTopIcon,
   LinkedinIcon,
@@ -197,6 +198,16 @@ export const projects = [
     link: "https://meetup.ayanabha.xyz",
   },
 ];
+
+export const footer_banner_details = {
+  heading: "Let's Work Together",
+  heading2: "Please have a look at my resume",
+  button: {
+    text: "Resume",
+    icon: DownloadIcon,
+    link: resume,
+  },
+};
 
 export const footer_details = {
   heading: "Living, learning, & leveling up one day at a time",
