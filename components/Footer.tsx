@@ -78,7 +78,7 @@ const Footer = () => {
     await axios
       .post("/api/sendMessage", values)
       .then((res) => {
-        toast.success(res?.body?.message || "Message Sent");
+        toast.success("Message sent successfully");
       })
       .catch((err) => {
         toast.error(
