@@ -1,3 +1,4 @@
+"use client";
 import {
   footer_banner_details,
   footer_details,
@@ -6,7 +7,7 @@ import {
 import { ContactIcon, DownloadIcon, PhoneCallIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import {
   Card,
   CardContent,
@@ -21,6 +22,14 @@ import { Textarea } from "./ui/textarea";
 import { Button } from "./ui/button";
 import { Just_Another_Hand } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ValidationSchemaType, validationSchema } from "@/lib/messageValidator";
+import { z } from "zod";
+import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form";
+import toast from "react-hot-toast";
+import axios from "axios";
+import PulseLoader from "react-spinners/PulseLoader";
 
 const handwriting_font = Just_Another_Hand({
   weight: ["400"],
@@ -46,10 +55,40 @@ interface footer_banner_details_interface {
   };
 }
 
+const override = {
+  display: "block",
+  borderColor: "white",
+};
+
 const Footer = () => {
+  const [loading, setLoading] = useState(false);
+  let [color, setColor] = useState("#ffffff");
+
   const footer_dets: footer_details_interface = footer_details;
   const footer_banner_dets: footer_banner_details_interface =
     footer_banner_details;
+
+  const form = useForm<ValidationSchemaType>({
+    resolver: zodResolver(validationSchema),
+    mode: "onChange",
+  });
+
+  const sendMessage = async (values: ValidationSchemaType) => {
+    setLoading(true);
+    await axios
+      .post("/api/sendMessage", values)
+      .then((res) => {
+        toast.success(res?.body?.message || "Message Sent");
+      })
+      .catch((err) => {
+        toast.error(
+          err?.response?.data?.message ||
+            "Something went wrong ... Please try again"
+        );
+      });
+    setLoading(false);
+  };
+
   return (
     <section
       id="contact"
@@ -107,26 +146,67 @@ const Footer = () => {
               <CardHeader>
                 <CardTitle className="text-2xl">Get in touch with me</CardTitle>
               </CardHeader>
-              <CardContent className="flex flex-col gap-4">
-                <div>
-                  <Label htmlFor="name">Name</Label>
-                  <Input type="text" id="name" placeholder="Enter your name" />
-                </div>
-                <div>
-                  <Label htmlFor="email">Email</Label>
-                  <Input
-                    type="email"
-                    id="email"
-                    placeholder="Enter your email address"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="email" placeholder="Type your message here" />
-                </div>
-                <div>
-                  <Button>Submit</Button>
-                </div>
+              <CardContent>
+                <Form {...form}>
+                  <form
+                    onSubmit={form.handleSubmit(sendMessage)}
+                    className="flex flex-col gap-4"
+                  >
+                    <FormField
+                      name="name"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Name</FormLabel>
+                          <FormControl>
+                            <Input placeholder="Enter your name" {...field} />
+                          </FormControl>
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="email"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Email</FormLabel>
+                          <FormControl>
+                            <Input
+                              placeholder="Enter your email address"
+                              {...field}
+                            />
+                          </FormControl>
+                        </FormItem>
+                      )}
+                    />
+                    <FormField
+                      name="message"
+                      render={({ field }) => (
+                        <FormItem>
+                          <FormLabel>Message</FormLabel>
+                          <FormControl>
+                            <Textarea
+                              placeholder="Please enter your message here"
+                              {...field}
+                            />
+                          </FormControl>
+                        </FormItem>
+                      )}
+                    />
+                    <Button type="submit" disabled={loading}>
+                      <span className="relative">
+                        Submit
+                        <PulseLoader
+                          color={color}
+                          loading={loading}
+                          cssOverride={override}
+                          size={5}
+                          aria-label="Loading Spinner"
+                          data-testid="loader"
+                          className="absolute -right-10 top-0"
+                        />
+                      </span>
+                    </Button>
+                  </form>
+                </Form>
               </CardContent>
             </Card>
           </div>

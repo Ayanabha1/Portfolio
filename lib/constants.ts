@@ -11,7 +11,7 @@ import {
 
 export const email = "ayanabha2002@gmail.com";
 export const resume =
-  "https://drive.google.com/file/d/1h-kfQQfqmLGPQBf-Wp7u30FpH3p2_E87/view?usp=sharing";
+  "https://drive.google.com/file/d/1uUTJVCswV6OUKn7geCzj3lO5KQDQA7H9/view?usp=sharing";
 export const phoneno = "+91 8918829811";
 
 export const hero_info = {
