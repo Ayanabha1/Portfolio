@@ -5,9 +5,9 @@ import { skills } from "@/lib/constants";
 const Skills = () => {
   const user_skills = skills;
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center mt-[-100px]">
       {/* Skills tiles */}
-      <div className="w-[90%] md:w-[85%] mt-[-100px] xl:w-[70%] min-h-[600px] border border-[rgba(0,0,0,0.2)] bg-white rounded-2xl shadow-lg flex flex-col md:flex-row overflow-hidden">
+      <div className="w-[90%] md:w-[85%]  xl:w-[70%] min-h-[600px] border border-[rgba(0,0,0,0.2)] bg-white rounded-2xl shadow-lg flex flex-col md:flex-row overflow-hidden">
         {user_skills.map((skill, i) => (
           <SkillTile
             key={i}

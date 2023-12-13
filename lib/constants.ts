@@ -1,10 +1,14 @@
 import {
+  ClipboardListIcon,
   Code2Icon,
   DownloadIcon,
   GithubIcon,
+  HomeIcon,
+  Laptop2Icon,
   LayoutPanelTopIcon,
   LinkedinIcon,
   MailIcon,
+  PhoneCallIcon,
   WorkflowIcon,
   icons,
 } from "lucide-react";
@@ -13,6 +17,72 @@ export const email = "ayanabha2002@gmail.com";
 export const resume =
   "https://drive.google.com/file/d/1uUTJVCswV6OUKn7geCzj3lO5KQDQA7H9/view?usp=sharing";
 export const phoneno = "+91 8918829811";
+export const linkedin = "https://www.linkedin.com/in/ayanabha-misra-7196091b4/";
+export const github = "https://github.com/Ayanabha1";
+export const leetcode = "https://leetcode.com/Ayanabha1";
+
+export const nav_links = [
+  {
+    name: "Intro",
+    link: "/",
+    icon: HomeIcon,
+    desc: "A brief overview of who I am.",
+  },
+  {
+    name: "About Me",
+    link: "#about",
+    icon: ClipboardListIcon,
+    desc: "Elaboration on my background and technical skill set.",
+  },
+  {
+    name: "Projects",
+    link: "#projects",
+    icon: Laptop2Icon,
+    desc: "A few noteworthy projects I've worked on.",
+  },
+  {
+    name: "Contact",
+    link: "#contact",
+    icon: PhoneCallIcon,
+    desc: "Get in touch with me.",
+  },
+];
+
+export const social_links = [
+  {
+    name: "LinkedIn",
+    icon: "/icons/linkedin.png",
+    link: linkedin,
+    text: "LinkedIn",
+  },
+  {
+    name: "Github",
+    icon: GithubIcon,
+    link: github,
+    text: "Github",
+  },
+  {
+    name: "Leetcode",
+    icon: "/icons/leetcode.png",
+    link: leetcode,
+    text: "Leetcode",
+  },
+];
+
+export const contact_links = [
+  {
+    name: "ayanabha2002@gmail.com",
+    icon: MailIcon,
+    link: `mailto:${email}`,
+    text: "Email",
+  },
+  {
+    name: "+91 8918829811",
+    icon: PhoneCallIcon,
+    link: `tel:${phoneno}`,
+    text: "Call Me",
+  },
+];
 
 export const hero_info = {
   hero_text: "Full-Stack Web Developer & Problem Solver",
@@ -22,7 +92,15 @@ export const hero_info = {
 
 export const about_details = {
   heading: "Hi, I am Ayanabha Misra. Nice to meet you 👋🏻",
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, nobis distinctio! Iure iusto necessitatibus a! Repellendus pariatur eum hic non, asperiores repellat in amet delectus. Sunt in, iusto accusamus perferendis enim dicta earum labore. Vitae modi velit tenetur esse sunt!",
+  desc: "I am currently a final-year student at KIIT University in Bhubaneswar. Throughout my four years in college, I have dedicated my efforts to honing my skills in web development, devops, and problem-solving. I actively practice problem-solving on platforms like LeetCode. For a more detailed overview of my qualifications and experiences, please refer to my resume.",
+  links: [
+    { name: "Resume", link: resume, icon: DownloadIcon },
+    {
+      name: "Leetcode",
+      link: leetcode,
+      icon: "/icons/leetcode.png",
+    },
+  ],
 };
 
 export const skills = [
@@ -38,6 +116,10 @@ export const skills = [
       {
         name: "CSS",
         icon: "/icons/css3d.png",
+      },
+      {
+        name: "TailwindCSS",
+        icon: "/icons/tailwind.png",
       },
       {
         name: "Javascript",
@@ -215,12 +297,12 @@ export const footer_details = {
     {
       name: "Linkedin",
       icon: LinkedinIcon,
-      link: "https://www.linkedin.com/in/ayanabha-misra-7196091b4/",
+      link: linkedin,
     },
     {
       name: "Github",
       icon: GithubIcon,
-      link: "https://github.com/Ayanabha1",
+      link: github,
     },
     {
       name: "Email",

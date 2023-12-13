@@ -3,10 +3,15 @@ import { MenuIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import NavbarSheet from "./NavbarSheet";
 import { useNav } from "@/hooks/navsheethook";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
+import { Just_Another_Hand } from "next/font/google";
+
+const handwriting_font = Just_Another_Hand({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 const Navbar = () => {
   const [glueNavbar, setGlueNavbar] = useState(false);
@@ -34,8 +39,14 @@ const Navbar = () => {
         glueNavbar ? "fixed top-0 left-0 bg-white z-[5000] shadow-xl" : "flex"
       )}
     >
-      <div className="relative h-10 w-10 sm:h-12 sm:w-12 ">
-        <Image fill src="/logo.png" alt="logo" />
+      <div className="flex items-center gap-2">
+        <div className="relative h-10 w-10 sm:h-12 sm:w-12 ">
+          <Image fill src="/hero.png" alt="logo" />
+        </div>
+        <div className="h-12 w-[1.5px] bg-neutral-400"></div>
+        <h1 className={cn(handwriting_font.className, "text-4xl ml-2")}>
+          Ayanabha Misra
+        </h1>
       </div>
       <Button
         variant="ghost"
@@ -44,7 +55,6 @@ const Navbar = () => {
       >
         <MenuIcon />
       </Button>
-      <NavbarSheet />
     </nav>
   );
 };
