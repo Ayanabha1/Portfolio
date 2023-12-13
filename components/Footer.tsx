@@ -92,7 +92,7 @@ const Footer = () => {
   return (
     <section
       id="contact"
-      className="relative w-full h-[1200px] sm:h-[1100px] md:h-[800px] lg:h-[700px] bg-primary mt-20 lg:mt-20px"
+      className="relative w-full h-[1200px] sm:h-[1100px] md:h-[800px] lg:h-[700px] bg-primary mt-20 lg:mt-20px scroll-m-[250px]"
     >
       <div className="absolute -top-20 left-[0] w-full">
         <div className="mx-auto bg-[rgb(20,28,58)] w-[92%] lg:w-[80%] rounded-xl shadow-2xl flex flex-col lg:flex-row gap-8 items-center justify-between p-10 text-white text-center font-medium lg:font-semibold ">

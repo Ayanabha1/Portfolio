@@ -19,7 +19,7 @@ const About = () => {
   const about_det: about_details_interface = about_details;
 
   return (
-    <section id="about">
+    <section id="about" className="scroll-my-[70px]">
       {/* About Me & Skills Section */}
       <div className="w-full bg-primary pb-[25vh] text-center px-10 md:px-0">
         {/* Some info about me */}

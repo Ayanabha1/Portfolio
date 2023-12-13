@@ -38,7 +38,7 @@ export const nav_links = [
     name: "Projects",
     link: "#projects",
     icon: Laptop2Icon,
-    desc: "A few noteworthy projects I've worked on.",
+    desc: "A few notable personal projects of mine",
   },
   {
     name: "Contact",
