@@ -61,7 +61,7 @@ const NavbarSheet = () => {
   return (
     <section
       className={cn(
-        "absolute top-0 left-0 z-[500] h-0 w-[100vw] flex bg-gradient-to-r from-neutral-300 via-gray-50 to-neutral-300 px-0  transition-all duration-700 overflow-hidden",
+        "fixed top-0 left-0 z-[5000] h-0 w-[100vw] flex bg-gradient-to-r from-neutral-300 via-gray-50 to-neutral-300 px-0  transition-all duration-700 overflow-hidden",
         navbar.is_open
           ? "flex h-[100vh] py-2 xs:py-8 transition-all duration-700 "
           : "h-0 py-0 transition-all duration-700 "

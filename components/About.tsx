@@ -28,7 +28,7 @@ const About = () => {
           <p className="md:max-w-[50%] text-xl text-center">{about_det.desc}</p>
 
           {/* Some Links */}
-          <div className="flex gap-5">
+          <div className="flex gap-5 mt-10">
             {about_det.links.map((item, i) => (
               <Link
                 key={i}
