@@ -13,6 +13,7 @@ import {
   icons,
 } from "lucide-react";
 
+export const name = "Ayanabha Misra";
 export const email = "ayanabha2002@gmail.com";
 export const resume =
   "https://drive.google.com/file/d/1uUTJVCswV6OUKn7geCzj3lO5KQDQA7H9/view?usp=sharing";
@@ -91,7 +92,7 @@ export const hero_info = {
 };
 
 export const about_details = {
-  heading: "Hi, I am Ayanabha Misra. Nice to meet you 👋🏻",
+  heading: `Hi, I am ${name}. Nice to meet you 👋🏻`,
   desc: "I am currently a final-year student at KIIT University in Bhubaneswar. Throughout my four years in college, I have dedicated my efforts to honing my skills in web development, devops, and problem-solving. I actively practice problem-solving on platforms like LeetCode. For a more detailed overview of my qualifications and experiences, please refer to my resume.",
   links: [
     { name: "Resume", link: resume, icon: DownloadIcon },

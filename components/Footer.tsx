@@ -2,6 +2,7 @@
 import {
   footer_banner_details,
   footer_details,
+  name,
   phoneno,
 } from "@/lib/constants";
 import { ContactIcon, DownloadIcon, PhoneCallIcon } from "lucide-react";
@@ -139,7 +140,7 @@ const Footer = () => {
                   </Link>
                 ))}
               </div>
-              <p className="text-lg ">Handcrafted by me © Ayanabha Misra</p>
+              <p className="text-lg ">Handcrafted by me © {name}</p>
             </div>
             {/* Contact */}
             <Card className="w-[100%] md:w-[60%] max-w-[750px] shadow-2xl">

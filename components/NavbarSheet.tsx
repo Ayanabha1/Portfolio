@@ -15,7 +15,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import { useNav } from "@/hooks/navsheethook";
 import { cn } from "@/lib/utils";
-import { contact_links, nav_links, social_links } from "@/lib/constants";
+import { contact_links, name, nav_links, social_links } from "@/lib/constants";
 import { Just_Another_Hand } from "next/font/google";
 import Image from "next/image";
 
@@ -87,7 +87,7 @@ const NavbarSheet = () => {
               "text-4xl tracking-wide,relative"
             )}
           >
-            Ayanabha Misra
+            {name}
           </h1>
           <div className="relative w-36 h-4 -mt-2 -ml-3">
             <Image fill src="/squeeky_undeline.png" alt="" />

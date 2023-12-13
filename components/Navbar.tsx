@@ -7,6 +7,7 @@ import { useNav } from "@/hooks/navsheethook";
 import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { Just_Another_Hand } from "next/font/google";
+import { name } from "@/lib/constants";
 
 const handwriting_font = Just_Another_Hand({
   weight: ["400"],
@@ -45,7 +46,7 @@ const Navbar = () => {
         </div>
         <div className="h-12 w-[1.5px] bg-neutral-400"></div>
         <h1 className={cn(handwriting_font.className, "text-4xl ml-2")}>
-          Ayanabha Misra
+          {name}
         </h1>
       </Link>
       <Button
