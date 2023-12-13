@@ -39,7 +39,7 @@ const Navbar = () => {
         glueNavbar ? "fixed top-0 left-0 bg-white z-[5000] shadow-xl" : "flex"
       )}
     >
-      <div className="flex items-center gap-2">
+      <Link href="/" className="flex items-center gap-2">
         <div className="relative h-10 w-10 sm:h-12 sm:w-12 ">
           <Image fill src="/hero.png" alt="logo" />
         </div>
@@ -47,7 +47,7 @@ const Navbar = () => {
         <h1 className={cn(handwriting_font.className, "text-4xl ml-2")}>
           Ayanabha Misra
         </h1>
-      </div>
+      </Link>
       <Button
         variant="ghost"
         className="relative"
