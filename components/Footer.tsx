@@ -1,10 +1,5 @@
 "use client";
-import {
-  footer_banner_details,
-  footer_details,
-  name,
-  phoneno,
-} from "@/lib/constants";
+import { footer_details, name, phoneno } from "@/lib/constants";
 import { ContactIcon, DownloadIcon, PhoneCallIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,6 +26,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel } from "./ui/form";
 import toast from "react-hot-toast";
 import axios from "axios";
 import PulseLoader from "react-spinners/PulseLoader";
+import FooterBanner from "./FooterBanner";
 
 const handwriting_font = Just_Another_Hand({
   weight: ["400"],
@@ -46,16 +42,6 @@ interface footer_details_interface {
   }[];
 }
 
-interface footer_banner_details_interface {
-  heading: string;
-  heading2: string;
-  button: {
-    text: string;
-    icon: any;
-    link: string;
-  };
-}
-
 const override = {
   display: "block",
   borderColor: "white",
@@ -66,8 +52,6 @@ const Footer = () => {
   let [color, setColor] = useState("#ffffff");
 
   const footer_dets: footer_details_interface = footer_details;
-  const footer_banner_dets: footer_banner_details_interface =
-    footer_banner_details;
 
   const form = useForm<ValidationSchemaType>({
     resolver: zodResolver(validationSchema),
@@ -91,32 +75,10 @@ const Footer = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="relative w-full h-[1200px] sm:h-[1100px] md:h-[800px] lg:h-[700px] bg-primary mt-20 lg:mt-20px scroll-m-[250px]"
-    >
-      <div className="absolute -top-20 left-[0] w-full">
-        <div className="mx-auto bg-[rgb(20,28,58)] w-[92%] lg:w-[80%] rounded-xl shadow-2xl flex flex-col lg:flex-row gap-8 items-center justify-between p-10 text-white text-center font-medium lg:font-semibold ">
-          <h1 className="text-lg md:text-2xl">
-            {footer_banner_details.heading}
-          </h1>
-          <h1 className="text-lg md:text-2xl">
-            {footer_banner_details.heading2}
-          </h1>
-          <Link
-            href={footer_banner_dets.button.link}
-            target="_blank"
-            className="flex gap-2 items-center text-2xl font-medium p-3 px-8 border-2 border-[rgb(91,233,185)] rounded-full hover:bg-[rgb(91,233,185)] hover:text-black cursor-pointer transition-all duration-300"
-          >
-            <footer_banner_details.button.icon />
-            <span className="text-lg md:text-xl font-medium">
-              {footer_banner_details.button.text}
-            </span>
-          </Link>
-        </div>
-
-        <div className="flex items-center justify-center py-10">
-          <div className="w-[90%] lg:w-[80%] flex flex-col-reverse md:flex-row justify-between">
+    <section id="contact" className="relative w-full z-[40]  bg-primary">
+      <div className="w-full ">
+        <div className="flex items-center justify-center pt-[250px] lg:pt-[150px] py-10">
+          <div className="w-[90%] lg:w-[80%] flex flex-col-reverse md:flex-row md:items-start justify-between">
             <div className="flex flex-col gap-8 items-left justify-center text-white mt-10 items-center md:items-start">
               {/* <div className="relative h-16 w-16 invert">
                 <Image fill src="/logo.png" alt="Ayanabha" />
@@ -140,7 +102,7 @@ const Footer = () => {
                   </Link>
                 ))}
               </div>
-              <p className="text-lg ">Handcrafted by me © {name}</p>
+              <p className="text-lg ">Handcrafted by © {name}</p>
             </div>
             {/* Contact */}
             <Card className="w-[100%] md:w-[60%] max-w-[750px] shadow-2xl">

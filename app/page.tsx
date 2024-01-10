@@ -9,6 +9,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Footer from "@/components/Footer";
 import NavbarSheet from "@/components/NavbarSheet";
+import FooterBanner from "@/components/FooterBanner";
 
 const poppins = Roboto({
   weight: ["300", "400", "700"],
@@ -24,6 +25,8 @@ export default function Home() {
       <About />
       <Skills />
       <Projects />
+      <FooterBanner />
+
       <Footer />
       <AvailableBadge />
     </main>
