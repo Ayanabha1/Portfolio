@@ -5,11 +5,13 @@ import Link from "next/link";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import { Button } from "./ui/button";
 
 interface project_interface {
   name: string;
   techs: string[];
   images?: string[];
+  description: string;
   git: string;
   link: string;
 }
@@ -34,9 +36,9 @@ const ProjectCard = ({ project }: { project: project_interface }) => {
   };
 
   return (
-    <div className="w-full sm:w-[400px] shadow-lg border rounded-xl overflow-hidden cursor-pointer">
+    <div className="w-full md:w-[75%] lg:w-[46%] xl:w-[40%]  shadow-lg border rounded-xl overflow-hidden cursor-pointer">
       {/* Project images container */}
-      <div className="relative h-[280px] w-full">
+      <div className="relative h-[30vh] xsm:h-[45vh] flex-grow w-full">
         {/* Image carousel */}
         <Carousel
           swipeable={project.images!.length > 1 ? true : false}
@@ -57,36 +59,59 @@ const ProjectCard = ({ project }: { project: project_interface }) => {
             </div>
           ))}
         </Carousel>
-        {/* Project name */}
-        <div className="z-20 flex items-center justify-between absolute bottom-0 w-full bg-gradient-to-t from-[rgba(0,0,0)] to-[transparent] backdrop-blur-[2px] border-none outline-none text-white text-xl font-semibold p-2 px-3">
-          {project.name}
-          <div className="flex items-center text-md shadow-xl">
-            <div className="flex items-center p-1 pl-3 bg-[rgba(255,255,255,0.82)] backdrop-blur-[2px] hover:shadow-[inset_0_0_3px_rgba(0,0,0,1)] transition-all rounded-tl-sm rounded-bl-sm">
-              <Link href={project.link} target="_blank">
-                <LinkIcon className="h-5 w-5 mr-[3px] text-black" />
-              </Link>
-            </div>
-            <div className="flex items-center p-1 pr-3  bg-[rgba(255,255,255,0.82)] backdrop-blur-[2px] hover:shadow-[inset_0_0_3px_rgba(0,0,0,1)] transition-all rounded-tr-sm rounded-br-sm">
-              <Link href={project.git} target="_blank">
-                <div className="relative h-5 w-5 ml-[4px]">
-                  <Image fill src="/icons/git.png" alt="" />
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
       </div>
 
-      {/* Technologies Used */}
-      <div className="flex p-3 justify-between">
-        <h2 className="text-lg font-semibold">Technologies Used:</h2>
-      </div>
-      <div className="flex flex-wrap gap-2 pb-5 px-3">
-        {project.techs.map((tech, i) => (
-          <span key={i} className="p-2 shadow border rounded-md">
-            {tech}
-          </span>
-        ))}
+      {/* Project details */}
+
+      <div className="pb-5">
+        {/* Project name and links */}
+
+        <div className="flex items-center justify-between p-3 border-b">
+          <h2 className="text-md xsm:text-lg font-semibold">{project?.name}</h2>
+          <div className="flex items-center gap-3">
+            <Link href={project?.link} target="_blank">
+              <Button
+                variant="secondary"
+                className="relative shadow-md border text-sm xsm:text-md"
+              >
+                <LinkIcon className="h-4 w-4 mr-[3px] text-black" /> Visit
+              </Button>
+            </Link>
+
+            <Link href={project?.git} target="_blank">
+              <Button
+                variant="secondary"
+                className="relative shadow-md border text-sm xsm:text-md"
+              >
+                <Image
+                  width={20}
+                  height={20}
+                  src="/icons/git.png"
+                  className="mr-[3px]"
+                  alt=""
+                />
+                Github
+              </Button>
+            </Link>
+          </div>
+        </div>
+        {/* Description */}
+        <div className="p-3">
+          <h2 className="text-md xsm:text-lg font-semibold">Description</h2>
+          <p className="text-sm xsm:text-base">{project?.description}</p>
+        </div>
+        {/* Technologies Used */}
+
+        <div className="flex flex-wrap gap-2 px-3">
+          {project.techs.map((tech, i) => (
+            <span
+              key={i}
+              className="p-2 shadow border rounded-md text-sm xsm:text-base"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

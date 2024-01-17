@@ -71,6 +71,7 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
       screens: {
+        xsm: "400px",
         xs: "500px",
         sm: "640px",
         // => @media (min-width: 640px) { ... }

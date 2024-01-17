@@ -26,7 +26,6 @@ export default function Home() {
       <Skills />
       <Projects />
       <FooterBanner />
-
       <Footer />
       <AvailableBadge />
     </main>

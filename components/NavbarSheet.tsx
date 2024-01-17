@@ -129,8 +129,8 @@ const NavbarSheet = () => {
         </div>
 
         {/* Socials & Contacts links */}
-        <div className="flex flex-col xs:flex-row gap-3 items-center xs:pl-14 pr-0 font-bold ">
-          <h1 className="mr-5  xl:text-2xl ">Social links:</h1>
+        <div className="flex flex-col xs:flex-row gap-3 items-start xs:pl-14 pr-0 font-bold ">
+          <h1 className="mr-5 text-bold xl:text-2xl ">Social links</h1>
           <div className="grid grid-cols-2 xs:flex xs:flex-row items-start justify-center xs:justify-normal flex-wrap gap-5">
             {socials.map((item, i) => (
               <div key={i} className="flex items-center justify-start">

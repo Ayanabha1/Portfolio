@@ -214,16 +214,46 @@ export const skills = [
 
 export const projects = [
   {
+    name: "MEETUP",
+    techs: [
+      "HTML",
+      "JavaScript",
+      "ReactJs",
+      "TailwindCSS",
+      "NodeJs",
+      "MongoDB",
+      "WebRTC",
+      "Docker",
+      "Github Actions",
+      "AWS Lambda",
+      "AWS API Gateway",
+      "AWS S3",
+      "AWS Cloudfront",
+    ],
+    images: [
+      "/project_images/meetup/1.png",
+      "/project_images/meetup/2.png",
+      "/project_images/meetup/3.png",
+      "/project_images/meetup/4.png",
+    ],
+    git: "https://github.com/Ayanabha1/Meetup",
+    link: "https://meetup.ayanabha.xyz",
+    description:
+      "MeetUp is a WebRTC-based video conferencing app that allows users to create rooms with multiple people and chat in real-time.",
+  },
+  {
     name: "QUELLO",
     techs: [
+      "HTML",
+      "TypeScript",
       "NextJs",
-      "Mysql",
-      "Prisma",
-      "OpenAI API",
-      "Replica API",
-      "Stripe",
       "TailwindCSS",
       "Shadcn/Ui",
+      "OpenAI API",
+      "ReplicaAI API",
+      "Stripe",
+      "Mysql",
+      "Prisma",
     ],
     images: [
       "/project_images/quello/1.png",
@@ -233,15 +263,22 @@ export const projects = [
     ],
     git: "https://github.com/Ayanabha1/Quello",
     link: "https://quello.vercel.app",
+    description:
+      "MeetUp is a WebRTC-based video conferencing app that allows users to create rooms with multiple people and chat in real-time.",
   },
   {
     name: "SPORTFLIX",
     techs: [
+      "HTML",
+      "CSS",
+      "JavaScript",
       "ReactJs",
       "NodeJs",
       "MongoDB",
       "Socket.io",
       "LeafletJs Api",
+      "Docker",
+      "Github Actions",
       "AWS Lambda",
       "AWS API Gateway",
       "AWS S3",
@@ -256,29 +293,8 @@ export const projects = [
     ],
     git: "https://github.com/Ayanabha1/SportFlix",
     link: "https://sportflix.ayanabha.xyz",
-  },
-  {
-    name: "MEETUP",
-    techs: [
-      "ReactJs",
-      "TailwindCSS",
-      "NodeJs",
-      "MongoDB",
-      "WebRTC",
-      "Agora.IO APIs",
-      "AWS Lambda",
-      "AWS API Gateway",
-      "AWS S3",
-      "AWS Cloudfront",
-    ],
-    images: [
-      "/project_images/meetup/1.png",
-      "/project_images/meetup/2.png",
-      "/project_images/meetup/3.png",
-      "/project_images/meetup/4.png",
-    ],
-    git: "https://github.com/Ayanabha1/Meetup",
-    link: "https://meetup.ayanabha.xyz",
+    description:
+      "MeetUp is a WebRTC-based video conferencing app that allows users to create rooms with multiple people and chat in real-time.",
   },
 ];
 

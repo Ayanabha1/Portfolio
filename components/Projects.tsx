@@ -9,6 +9,7 @@ interface project_interface {
   images: string[];
   git: string;
   link: string;
+  description: string;
 }
 
 const Projects = () => {
