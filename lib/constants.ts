@@ -193,10 +193,6 @@ export const skills = [
         icon: "/icons/gitac.png",
       },
       {
-        name: "Jenkins",
-        icon: "/icons/jenkins.png",
-      },
-      {
         name: "Docker",
         icon: "/icons/docker.png",
       },
