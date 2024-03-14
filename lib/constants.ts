@@ -16,7 +16,7 @@ import {
 export const name = "Ayanabha Misra";
 export const email = "ayanabha2002@gmail.com";
 export const resume =
-  "https://drive.google.com/file/d/1uUTJVCswV6OUKn7geCzj3lO5KQDQA7H9/view?usp=sharing";
+  "https://drive.google.com/file/d/1AfajvK6c_td4jbNEGHyp7IT6n51aqI--/view?usp=drive_link";
 export const phoneno = "+91 8918829811";
 export const linkedin = "https://www.linkedin.com/in/ayanabha-misra-7196091b4/";
 export const github = "https://github.com/Ayanabha1";
