@@ -16,7 +16,7 @@ import {
 export const name = "Ayanabha Misra";
 export const email = "ayanabha2002@gmail.com";
 export const resume =
-  "https://drive.google.com/file/d/1AfajvK6c_td4jbNEGHyp7IT6n51aqI--/view?usp=drive_link";
+  "https://drive.google.com/file/d/1h9nXje-QyBrEMvXZrJ9kih8gqiVsUUR0/view?usp=sharing";
 export const phoneno = "+91 8918829811";
 export const linkedin = "https://www.linkedin.com/in/ayanabha-misra-7196091b4/";
 export const github = "https://github.com/Ayanabha1";
@@ -93,7 +93,7 @@ export const hero_info = {
 
 export const about_details = {
   heading: `Hi, I am ${name}. Nice to meet you 👋🏻`,
-  desc: "I am currently a final-year student at KIIT University in Bhubaneswar. Throughout my four years in college, I have dedicated my efforts to honing my skills in web development, devops, and problem-solving. I actively practice problem-solving on platforms like LeetCode. For a more detailed overview of my qualifications and experiences, please refer to my resume.",
+  desc: "I am a backend developer with a passion for building scalable, efficient, and innovative systems. My expertise spans web development, DevOps, and problem-solving, with hands-on experience in designing high-performance architectures and crafting seamless user experiences. Beyond development, I bring a strong focus on reliability and system performance, ensuring every solution is fine-tuned for the best results. For a detailed overview of my projects and experiences, please check out my resume.",
   links: [
     { name: "Resume", link: resume, icon: DownloadIcon },
     {
@@ -170,8 +170,24 @@ export const skills = [
         icon: "/icons/socket.png",
       },
       {
+        name: "Redis",
+        icon: "/icons/redis.png",
+      },
+      {
+        name: "Kafka",
+        icon: "/icons/kafka.png",
+      },
+      {
+        name: "Monolithic",
+        icon: "/icons/monolith.png",
+      },
+      {
         name: "Serverless",
         icon: "/icons/lambda.png",
+      },
+      {
+        name: "Microservices",
+        icon: "/icons/microservices.png",
       },
     ],
   },
@@ -195,6 +211,14 @@ export const skills = [
       {
         name: "Docker",
         icon: "/icons/docker.png",
+      },
+      {
+        name: "Kubernetes",
+        icon: "/icons/kubernetes.png",
+      },
+      {
+        name: "Grafana",
+        icon: "/icons/grafana.png",
       },
       {
         name: "Ansible",
@@ -235,7 +259,7 @@ export const projects = [
       "https://ik.imagekit.io/Ayanabha1/Projects/meetup/6.png",
     ],
     git: "https://github.com/Ayanabha1/Meetup",
-    link: "https://meetup.ayanabha.xyz",
+    link: "https://meetup.ayanabha.life",
     description:
       "MeetUp is a WebRTC-based video conferencing app that allows users to create rooms with multiple people and chat in real-time.",
   },
@@ -261,7 +285,7 @@ export const projects = [
       "https://ik.imagekit.io/Ayanabha1/Projects/quello/4.png",
     ],
     git: "https://github.com/Ayanabha1/Quello",
-    link: "https://quello.ayanabha.xyz",
+    link: "https://quello.ayanabha.life",
     description:
       "Quello: Your AI-powered hub for conversation, code, images, and music—fueled by GPT-3.5 Turbo. Experience modern interaction with ease.",
   },
@@ -292,7 +316,7 @@ export const projects = [
       "https://ik.imagekit.io/Ayanabha1/Projects/sportflix/6.png",
     ],
     git: "https://github.com/Ayanabha1/SportFlix",
-    link: "https://sportflix.ayanabha.xyz",
+    link: "https://sportflix.ayanabha.life",
     description:
       "Sportflix simplifies outdoor sports meetups. Create events, join others, and chat—all in one place. Say hello to hassle-free sports coordination.",
   },
@@ -319,7 +343,7 @@ export const projects = [
       "https://ik.imagekit.io/Ayanabha1/Projects/reelsgood/7.png",
     ],
     git: "https://github.com/Ayanabha1/ReelsGood",
-    link: "https://reelsgood.ayanabha.xyz",
+    link: "https://reelsgood.ayanabha.life",
     description:
       "ReelsGood is a modern movie ticket booking system offering a seamless and intuitive user experience with modern and responsive design tailored to meet the needs of today's users.",
   },
